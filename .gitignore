@@ -1,0 +1,18 @@
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Generated profile (each fork builds their own)
+profile/
+
+# Rendered output
+*.pdf
+*.html
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor noise
+.vscode/
+.idea/
+*.swp

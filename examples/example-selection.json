@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0.0",
+
+  "format": {
+    "format_status": "loaded",
+    "page_size": "A4",
+    "page_length": 3,
+    "section_order": [
+      "profile",
+      "competencies",
+      "roles",
+      "early_career",
+      "education",
+      "awards",
+      "volunteering"
+    ],
+    "section_titles": {
+      "profile": "Profile",
+      "competencies": "Key competencies and recent achievements",
+      "roles": "Professional experience",
+      "early_career": "Early career",
+      "education": "Education and executive development",
+      "awards": "Awards and recognition",
+      "volunteering": "Volunteering and community",
+      "sectors": "Sector experience",
+      "platforms": "Platforms and frameworks",
+      "languages": "Languages"
+    },
+    "include_photo": false,
+    "include_personal_details": false,
+    "headings_style": "allcaps",
+    "bullet_style": "solid",
+    "bullet_target_words": 60,
+    "role_layout": "split",
+    "include_company_bio": true,
+    "include_role_context": true,
+    "bold_lead_ins": true,
+    "date_format": "MMM YYYY",
+    "font": "Arial",
+    "font_size_body": 10.5,
+    "font_size_name": 24,
+    "colour_hex": "1B3A5C",
+    "margin_top_inches": 0.85,
+    "margin_bottom_inches": 0.85,
+    "margin_left_inches": 0.85,
+    "margin_right_inches": 0.85,
+    "older_roles_treatment": "condensed"
+  },
+
+  "header": {
+    "name": "Maya Chen",
+    "location": "London, United Kingdom",
+    "phone": "+44 7700 900123",
+    "email": "maya.chen@example.com",
+    "linkedin": "linkedin.com/in/maya-chen-example",
+    "extra_links": [],
+    "headline": "COO Candidate | Scaled Operations to IPO | International Expansion at Speed"
+  },
+
+  "tailored_summary": "I am a COO with track record of building the operating systems that take Series C scale-ups through IPO and beyond. At FieldGrid, I reduced cost-to-serve by 47 percent over four years while revenue grew four times, launched into six new markets in eighteen months, and led the company through its 2023 IPO. Earlier at Verdant, I restructured operations to handle a five times larger book of business with the same headcount and led the company through a US PE acquisition. I prefer building over running. I run what I build until it can run itself. I am writing because the role description matches the kind of work I want to be doing for the next three to five years.",
+
+  "competencies": [
+    {
+      "label": "Scaled Operations and Cost-to-Serve",
+      "scale_marker": "cost-to-serve down 47% while revenue grew 4x",
+      "evidence": "Built and ran the operating system at two scale-ups through their highest-growth phases. Specific track record of reducing cost-to-serve while headcount and complexity grew. Reduced support cost per ticket by 47 percent at FieldGrid while transaction volume quadrupled. Restructured the operations team at Verdant to run a 5x larger book of business with the same headcount."
+    },
+    {
+      "label": "International Expansion and Market Entry",
+      "scale_marker": "launched into 7 markets across EU, APAC",
+      "evidence": "Led market entry into the Netherlands, Germany, France, Spain, Singapore, Australia, and Japan across two roles. Built the legal, finance, payroll, and customer support stack for each market. Verdant's Singapore office reached profitability within nine months; FieldGrid's Germany expansion hit 40 percent of UK revenue within eighteen months."
+    },
+    {
+      "label": "Public-Market Readiness and Compliance",
+      "scale_marker": "2 companies, both passed external audit",
+      "evidence": "Stood up the financial controls, audit committee, and operational reporting systems that took FieldGrid through its 2023 IPO readiness review. Same role at Verdant in 2018, though that company was acquired before listing. Comfortable working with Big Four audit firms and dealing with SOX-equivalent requirements."
+    },
+    {
+      "label": "Executive Team Build and Coaching",
+      "scale_marker": "hired 14 VPs and Directors directly",
+      "evidence": "Hired and onboarded 14 VPs and Directors across both COO roles, including the CFO, CRO, CMO, and General Counsel at FieldGrid. Built the leadership operating cadence (weekly, monthly, quarterly), coaching plans for new VPs, and the performance management framework used across leadership."
+    },
+    {
+      "label": "Data-Driven Operations and Reporting",
+      "scale_marker": "rebuilt the metrics stack at both companies",
+      "evidence": "Rebuilt the operational metrics stack at both companies. At FieldGrid, replaced eleven scattered dashboards with a single board-grade reporting suite. The board adopted these metrics as the basis for all operational reporting. Comfortable with NetSuite, Salesforce, Workday, and Tableau; can specify what good looks like to a data team."
+    },
+    {
+      "label": "M&A and Post-Merger Integration",
+      "scale_marker": "3 acquisitions integrated, 1 exit",
+      "evidence": "Led integration of three acquisitions at FieldGrid totalling £85m enterprise value. Took the Verdant business through its acquisition by a US PE firm in 2019 and was retained for the integration. Specific experience reconciling tech stacks, harmonising customer success motions, and managing redundancies cleanly."
+    }
+  ],
+
+  "roles": [
+    {
+      "company": "FieldGrid Technologies",
+      "company_context": "B2B SaaS platform for field service management. Series D, approximately £180m revenue at time of writing, 850 staff across 7 markets. Listed on London Stock Exchange in 2023.",
+      "title": "Chief Operating Officer",
+      "dates": "Mar 2020 to Present",
+      "location": "London, United Kingdom",
+      "challenge": "Joined as the first COO at the start of a Series C raise. Operations were running on three sets of disconnected tools, the finance team was closing books 45 days late, and the international expansion team had no playbook for new markets. Hired with a brief to build the operating system the company would need to go public.",
+      "responsibilities": [
+        { "lead_in": "Owned global operations across finance, legal, people, customer success, IT, security, and revenue operations.", "rest": "Reported to CEO with seven direct reports and indirect responsibility for 320 staff across the operations functions." },
+        { "lead_in": "Led the operating cadence of the company,", "rest": "including the weekly executive meeting, monthly all-hands, quarterly business reviews, and annual planning. Co-owned the board pack with the CFO." },
+        { "lead_in": "Led international expansion,", "rest": "including market selection, legal entity setup, payroll, hiring, and customer support standup in each new market." },
+        { "lead_in": "Owned the M&A integration playbook", "rest": "and led the integration of three acquisitions made during my tenure (£85m total enterprise value)." },
+        { "lead_in": "Co-led the IPO readiness programme with the CFO and General Counsel,", "rest": "including financial controls, audit committee setup, and SOX-equivalent process design." }
+      ],
+      "achievements": [
+        { "outcome": "Reduced cost-to-serve per customer by 47 percent over four years", "context": "by consolidating eleven internal tools to four, restructuring the customer success org around segment ownership, and automating tier-1 support resolution through a self-serve product investment." },
+        { "outcome": "Launched into Germany, France, Spain, Singapore, Australia, and Japan", "context": "in eighteen months, with Germany reaching 40 percent of UK revenue within its first eighteen months. Built the operations stack for each market including legal entity, payroll, customer support, and local compliance." },
+        { "outcome": "Took the company successfully through IPO readiness review and listing in 2023", "context": "by leading financial controls hardening, audit committee setup, board reporting redesign, and the operational due diligence process with three sets of advisers." },
+        { "outcome": "Hired the CFO, CRO, CMO, and General Counsel", "context": "over a sixteen-month period, all of whom remained in role through the IPO. Designed the onboarding cadence and coaching plan for each." },
+        { "outcome": "Led integration of three acquisitions totalling £85m enterprise value", "context": "within six months of close in each case, with no material customer churn and full systems consolidation by month nine." }
+      ]
+    },
+    {
+      "company": "Verdant Markets",
+      "company_context": "Consumer fintech marketplace connecting retail investors to private market opportunities. Series C at the time of joining, acquired by US PE firm in 2019. FCA-authorised; approximately 180 staff at time of departure.",
+      "title": "VP Operations",
+      "dates": "Aug 2015 to Feb 2020",
+      "location": "London, United Kingdom",
+      "challenge": "Joined as VP Operations to professionalise an operations function that had been run as an extension of the founder's office. Brief was to ready the company for either an exit or a Series D.",
+      "responsibilities": [
+        { "lead_in": "Owned operations across finance, people, customer support, compliance, and vendor management.", "rest": "Five direct reports." },
+        { "lead_in": "Led FCA regulatory engagement", "rest": "including Senior Managers and Certification Regime implementation and consumer duty preparation." },
+        { "lead_in": "Led international expansion into the Netherlands and Singapore,", "rest": "including MAS application for Singapore." },
+        { "lead_in": "Co-led the sale process to the acquiring PE firm", "rest": "and was retained for post-acquisition integration." }
+      ],
+      "achievements": [
+        { "outcome": "Restructured operations to handle a 5x growth in book of business with the same headcount", "context": "by automating onboarding, restructuring the customer support team around customer cohorts rather than products, and renegotiating five major vendor contracts." },
+        { "outcome": "Led the company successfully through Senior Managers and Certification Regime implementation", "context": "including SMF function mapping, certification of all retail-facing staff, and new conduct rules training. The FCA accepted the implementation without follow-up." },
+        { "outcome": "Launched the Singapore office to profitability within nine months", "context": "including the MAS Capital Markets Services licence application, local hiring, and customer support standup, with first revenue inside ninety days." }
+      ]
+    },
+    {
+      "company": "Stratton Hayes",
+      "company_context": "Top-tier management consulting firm; operations strategy practice working with FTSE 100 and Fortune 500 clients on cost transformation and operating model design.",
+      "title": "Senior Manager, Operations Strategy",
+      "dates": "Sep 2010 to Jul 2015",
+      "location": "London, United Kingdom",
+      "challenge": "",
+      "responsibilities": [
+        { "lead_in": "Led operating model design engagements for FTSE 100 clients", "rest": "across financial services, retail, and consumer goods." }
+      ],
+      "achievements": [
+        { "outcome": "Delivered cost savings of approximately £45m across three FTSE 100 transformation engagements", "context": "by redesigning back-office operations, restructuring vendor portfolios, and renegotiating major service contracts." }
+      ]
+    }
+  ],
+
+  "early_career": [
+    { "title": "Analyst, Investment Banking", "company": "Citigroup", "dates": "Aug 2008 to Aug 2010" }
+  ],
+
+  "education": [
+    { "qualification": "MBA", "institution": "INSEAD", "dates": "Sep 2014 to Sep 2015", "notes": "Dean's List, Sponsored by Stratton Hayes" },
+    { "qualification": "BSc Economics", "institution": "London School of Economics", "dates": "Sep 2005 to Jun 2008", "notes": "First Class Honours, top 5%" }
+  ],
+
+  "awards": [
+    { "name": "OMX 40 Under 40, Operations Leaders", "year": "2022", "context": "Recognition for IPO readiness work and international expansion at FieldGrid." },
+    { "name": "INSEAD Distinguished Service Medal", "year": "2015", "context": "For chairing the Women in Business society and growing membership 4x in one year." }
+  ],
+
+  "volunteering": [
+    { "role": "Industry Mentor", "organisation": "London School of Economics Careers Service", "dates": "Sep 2018 to Present", "note": "Mentoring final-year economics undergraduates on early career choices." },
+    { "role": "Non-Executive Trustee", "organisation": "Women on Boards UK", "dates": "Mar 2022 to Present", "note": "Governance and oversight of the charity supporting women into board-level roles." }
+  ],
+
+  "sectors": [
+    "B2B SaaS",
+    "Marketplaces and consumer fintech",
+    "Professional services",
+    "E-commerce"
+  ],
+
+  "platforms": [
+    "NetSuite",
+    "Salesforce",
+    "Workday",
+    "Asana",
+    "Tableau",
+    "Power BI"
+  ],
+
+  "cover_letter": {
+    "applicant": {
+      "name": "Maya Chen",
+      "location": "London, United Kingdom",
+      "phone": "+44 7700 900123",
+      "email": "maya.chen@example.com",
+      "date": "May 2026"
+    },
+    "recipient": {
+      "company": "Lumen Health",
+      "role": "Chief Operating Officer",
+      "hiring_manager": "Priya Raghavan",
+      "address": ""
+    },
+    "salutation": "Dear Priya Raghavan,",
+    "opening": "I read the Series C announcement last month and the line that stood out was the bet on European expansion before US scale. That is the same call FieldGrid made in 2021, and the next three years there shaped how I think about international operations at this stage. I am writing because the COO role you have advertised is the work I want to be doing for the next three to five years.",
+    "career_fit": "I have built the operating systems for two scale-ups through their highest-growth phases. At FieldGrid, that meant taking a first-COO brief from Series C through IPO. At Verdant, it meant readying a Series C consumer fintech for a US PE exit. The Lumen role looks like the same shape of work in a sector I have not operated in directly, but where my experience with regulated international expansion translates closely.",
+    "evidence": [
+      "Two specific things I would bring. First, the cost-to-serve work. At FieldGrid I reduced support cost per customer by 47 percent over four years while transaction volume grew four times, by consolidating eleven tools to four, restructuring customer success around segment ownership, and investing in self-serve product. The Lumen JD calls out gross margin pressure as a 2026 priority; this is the work I have done before. Second, the international expansion. I launched FieldGrid into six new markets in eighteen months, including two of the markets Lumen is targeting (Singapore and Germany). I know the failure modes."
+    ],
+    "closing": "I would value an early conversation to understand what 18 months of progress would look like in the role and where the operational pressure points are now. I am free for an exploratory call any morning next week.",
+    "signoff": "Kind regards,"
+  },
+
+  "voice_check": {
+    "violations": [],
+    "user_accepted_violations": []
+  }
+}
