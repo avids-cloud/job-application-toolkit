@@ -10,13 +10,12 @@ You need:
 
 ## 1. Get the toolkit
 
-If you cloned with git:
-
 ```
+git clone https://github.com/avids-cloud/job-application-toolkit
 cd job-application-toolkit
 ```
 
-If you downloaded the zip, unzip it and `cd` into the unzipped folder.
+(Or download the zip from the repo and `cd` into the unzipped folder.)
 
 > ✓ Running `ls` in the folder lists `apply/`, `examples/`, `onboarding/`, `render/`.
 
