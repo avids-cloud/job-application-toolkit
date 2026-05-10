@@ -1,64 +1,108 @@
 # Job Application Toolkit
 
-A folder of markdown prompts that turns Claude into your job application copilot. Onboard once. Apply for any job in 10 minutes. Your data stays on your machine.
-
-## Who this is for
-
-Job applicants who want a CV and cover letter that sound like them, look the same every time, and do not end up on a vendor's server. Works for any country, any industry, any seniority from grad to C-suite.
+A folder of Claude prompts that helps you build a CV and cover letter tailored to a specific role, without the output drifting between runs or your career data leaving your machine. Built with NZ tech and operations professionals in mind.
 
 ## Why this exists
 
-Most CV tools are black boxes that embellish your career, give different output for the same input, and store your data on their servers. This toolkit is the smallest possible thing that fixes those problems: plain markdown prompts plus a profile folder you own. Claude is the runtime.
+I mentor a lot of students and early-career people. The NZ market right now is tight, and the same people who would have walked into a job two years ago are sending out twenty applications and hearing nothing back. A lot of that comes down to applications that are generic, applications that miss the obvious mismatch with the role, or applications that sound like everyone else's. This toolkit is what I use to help them apply more carefully. I am putting it on GitHub because there are far more people in that position than I can mentor one to one.
 
-## Start here
+It is not a CV writer. It is a structured way to keep your career history in one place, decide whether a role is worth applying for, and produce tailored documents that match how you actually talk.
 
-Follow [ONBOARDING.md](ONBOARDING.md). Thirteen numbered steps from clean clone to first PDF. Active typing time is 20 to 30 minutes plus the one-time onboarding interview.
-
-If you want the full reference walkthrough see [USAGE.md](USAGE.md). For why each piece exists see [DESIGN.md](DESIGN.md). To contribute see [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
-## What is in this repo
+## What's in here
 
 ```
 job-application-toolkit/
-├── ONBOARDING.md               start here
-├── README.md                   you are here
-├── USAGE.md                    full reference walkthrough
-├── DESIGN.md                   why every piece exists
-├── CONTRIBUTING.md             rules for PRs
-├── LICENSE                     MIT
+├── ONBOARDING.md                  step-by-step first-run walkthrough
+├── USAGE.md                       full reference walkthrough
+├── DESIGN.md                      why each piece exists
+├── CONTRIBUTING.md                rules for PRs
 ├── onboarding/
-│   ├── onboard-executive.md    senior leaders
-│   ├── onboard-midcareer.md    5-15 years
-│   └── onboard-grad.md         0-5 years
+│   ├── onboard-executive.md       interview for VP / Director / C-suite
+│   ├── onboard-midcareer.md       interview for 5-15 years in
+│   └── onboard-grad.md            interview for 0-5 years
 ├── apply/
-│   ├── apply.md                per-job selection prompt
-│   └── fit-assessment.md       standalone fit check
+│   ├── apply.md                   per-role selection prompt with voice scan
+│   └── fit-assessment.md          standalone fit check
 ├── render/
-│   ├── cv-artifact.md          CV renderer (HTML)
-│   └── cover-letter-artifact.md
+│   ├── cv-artifact.md             HTML CV renderer for print-to-PDF
+│   └── cover-letter-artifact.md   HTML cover letter renderer
 └── examples/
-    ├── example-profile/        anonymised profile (Maya Chen, COO)
-    └── example-selection.json  example apply output
+    ├── example-profile/           anonymised profile (Maya Chen, COO)
+    └── example-selection.json     sample apply output
 ```
 
-## How it works in two stages
+## Quick start
 
-**Stage 1: onboarding (one time, 30 to 45 minutes).** A guided conversation with Claude produces your `profile/` folder containing your career history (`profile.md`), tone rules (`voice.md`), CV layout (`format.md`), role filter (`filter.md`), and cover letter rules (`cover-letter.md`). Save the folder on your machine.
+You need [Claude Code](https://docs.claude.com/en/docs/claude-code) installed plus a browser for the render step.
 
-**Stage 2: applying (every job, about 10 minutes).** Paste `apply/apply.md`, your profile folder, and the job description into a Claude conversation. Claude tells you whether to apply. If yes, it produces a JSON object with the tailored content. Paste that JSON plus `render/cv-artifact.md` (and again with `render/cover-letter-artifact.md`) into claude.ai to get your rendered documents. Print to PDF.
+```
+git clone https://github.com/avids-cloud/job-application-toolkit
+cd job-application-toolkit
+claude
+```
 
-Claude never regenerates your career history. It selects from facts that already exist in your profile. The renderer assembles the document. This is what makes the output consistent and your data stay yours.
+In Claude Code, run the onboarding interview that matches your seniority:
 
-## Adapting to your market
+```
+Read onboarding/onboard-midcareer.md and run it as a conversation with me, starting from the file's first instruction.
+```
 
-CV conventions vary. Page length, photo, personal details, profile summary, page size, spelling, date format depend on country. The onboarding asks your target market in section 0 and adapts every later question. See [USAGE.md](USAGE.md) for market specifics.
+Replace `midcareer` with `executive` or `grad` if either fits better. Claude will interview you for 30 to 45 minutes about your career, voice, format, role filter, and cover letter rules. At the end it produces five files. Save them into a folder named `profile/` in the repo.
+
+To apply for a job, start a new Claude Code conversation in the same folder:
+
+```
+Read apply/apply.md. Use my profile/ folder. Here is the job description:
+
+[paste the JD]
+```
+
+Claude returns a fit assessment. If it says do not apply, stop. Otherwise tell it to proceed. It produces one JSON object inside a fenced code block. Copy it.
+
+To render: open https://claude.ai, paste the contents of `render/cv-artifact.md` plus the JSON in one message. A CV artifact opens in the side panel. Click the print icon, save as PDF. Repeat with `render/cover-letter-artifact.md`.
+
+`ONBOARDING.md` walks the same steps with a verification check at each stage.
+
+## What it's good at
+
+- Senior tech and operations roles. The example profile is a COO; the executive and mid-career flows are tuned for that kind of work.
+- Keeping your numbers and your wording stable across applications. Claude selects from your master profile rather than regenerating your career every run.
+- Catching obvious misfits before you spend an evening tailoring a CV. The fit assessment is honest by design, not encouraging.
+- Letting you write in your own voice. The voice tripwire scans generated prose against your prohibition list before the JSON is produced.
+
+## What it isn't
+
+- A magic application generator. If the underlying fit between you and the role is weak, no amount of tailoring fixes that. The toolkit will tell you so.
+- A replacement for thinking. You read the output, decide whether you can defend every claim in interview, and edit when something is off.
+- Hands-off. You maintain `profile.md` by hand. New role, new achievement, new competency: edit the file. The toolkit does not write back to it.
+- Polished for non-Anglo cover letter conventions. German formal recipient blocks and a few similar layouts are not yet supported. Page length and bullet length are soft targets, not enforced. See `_audit/known-issues.md` for the full list.
+- Most useful for people with a few roles to choose between. The grad onboarding flow exists, but the toolkit reaches its full value when there is real career history to select from.
+
+## Tailoring it to your own career
+
+The repo ships with `examples/example-profile/`, an anonymised profile for a COO called Maya Chen. Look at it to see the shape of a finished profile. Do not edit it.
+
+Your own data lives in a `profile/` folder you create. The onboarding interview produces it. After that, treat `profile.md` as a living document. New role: add a `### Role:` block. New achievement: add a bullet under the right role. The IDs in square brackets (e.g. `[id: r1]`) are stable references the apply prompt uses; do not rename them once set.
+
+If you want a different default market, the onboarding asks for one in section 0. Conventions for page length, photo, personal details, and date format adapt accordingly. NZ, Australia, UK, US, Germany, France, Singapore, Netherlands, and India are covered to some degree out of the box.
+
+If the onboarding interview does not quite fit your function or industry, change it. Open `onboarding/onboard-<tier>.md` in Claude Code and ask Claude to adapt the file for your role and vertical (research scientist in pharma, product designer in fintech, developer relations in open-source, whatever you do). The structure of the interview stays the same; the questions get sharper for your context. Same goes for `apply/apply.md` if your industry has signals worth checking for.
+
+## Built on Claude
+
+This toolkit is designed for [Claude](https://claude.ai) specifically and works best inside [Claude Code](https://docs.claude.com/en/docs/claude-code), where Claude can read and write your `profile/` files directly. The render step uses claude.ai because Claude artifacts only exist in the browser. Other LLMs may run the prompts, but no other model has been tested.
 
 ## Contributing
 
-PRs welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first. The toolkit has load-bearing principles (co-create not prescribe, select not regenerate, voice as constraints, no runtime dependencies) that any contribution must respect.
+PRs welcome. Particularly useful contributions:
+
+- Support for additional markets. Everywhere not in the list above is open. See "How to add a new market" in `CONTRIBUTING.md`.
+- Onboarding tiers for situations the existing three do not cover well: career returner, founder, academic-to-industry, public-sector-to-private.
+- Additional output formats (LaTeX, plain text, anything that consumes the same JSON).
+- Translations.
+
+Read `CONTRIBUTING.md` first. The toolkit has load-bearing principles (co-create not prescribe, select not regenerate, voice as constraints, no runtime dependencies) that any contribution has to respect.
 
 ## License
 
-[MIT](LICENSE). Use it, fork it, sell services on top of it. If you find a bug, file an issue.
+[MIT](LICENSE).
